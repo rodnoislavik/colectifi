@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paid Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__wrapper">
+    <div class="logo">Collectify</div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="seller.html">For Seller</a>
+          <ul class="submenu">
+            <li><a href="seller.html#advantages">Advantages</a></li>
+            <li><a href="paid-services.html">Paid Services</a></li>
+            <li><a href="seller.html#faq">FAQ</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="buyer.html">For Buyer</a>
+          <ul class="submenu">
+            <li><a href="buyer.html#advantages">Advantages</a></li>
+            <li><a href="buyer.html#faq">FAQ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div>
+      <a class="btn" data-type="publish">Publish</a>
+      <a class="btn btn--alt" data-type="view">View</a>
+    </div>
+  </div>
+</header>
+
+<section class="section container">
+<h1>Price List 📈</h1>
+
+<label>Days:
+<input type="range" min="1" max="30" value="1" id="days">
+</label>
+
+<p>Price: <span id="price">0.19</span>$</p>
+
+</section>
+
+<section class="section container">
+    <h2>Advantages ⭐</h2>
+    <div class="card"><p>Больше просмотров</p>
+<p>Ваши объявления получают приоритетное размещение, что увеличивает их видимость для потенциальных покупателей.</p></div>
+
+    <div class="card"><p>Выделение среди конкурентов</p>
+<p>Цветовая подсветка и закрепление позволяют привлечь внимание даже в насыщенных категориях.</p></div>
+
+    <div class="card"><p>Повышение доверия</p>
+<p>Часто просматриваемые и размещённые на главной странице объявления воспринимаются как более надёжные.</p></div>
+
+    <div class="card"><p>Гибкость и контроль</p>
+<p>Вы сами выбираете нужный срок и формат продвижения — от одного дня до месяца.</p></div>
+
+    <div class="card"><p>Комплексное продвижение с пакетом “Премиум”</p>
+    <p>Комбинация всех услуг даёт максимальный эффект и экономит до 30% бюджета.</p></div>
+
+    <div class="card"><p>Рост продаж</p>
+    <p>Продавцы, использующие платные функции, в среднем получают в 3 раза больше откликов и завершённых сделок.</p></div></div>
+</section>
+
+<section class="section container">
+    <h2>FAQ ⁉️</h2>
+    <div class="grit"><p>Вопрос: А зачем мне нужен прайс-лист продавца?</p></div>
+    <div class="card"><p>Ответ: Он помогает сразу показать покупателям, что именно вы предлагаете и по каким ценам. Так люди быстрее понимают, подходит ли им ваш товар или услуга.</p></div>
+
+    <div class="grit"><p>Вопрос: А как им пользоваться?</p></div>
+    <div class="card"><p>Ответ: Вы создаёте список своих позиций с ценами и краткими описаниями. Покупатели открывают его, сравнивают варианты и выбирают то, что им нужно. Просто и удобно.</p></div>
+
+    <div class="grit"><p>Вопрос: Вопрос: А если цены меняются?</p></div>
+    <div class="card"><p>Ответ: Вы легко можете обновлять прайс-лист в любой момент. Так покупатели всегда видят актуальную стоимость и не тратят время на уточнения.</p></div>
+
+    <div class="grit"><p>Вопрос: А что делать, если мои товары разные?</p></div>
+    <div class="card"><p>Ответ: Разбейте их на категории, укажите ключевые характеристики и добавьте примеры. Структурированный прайс-лист помогает покупателям быстрее найти нужное.</p></div>
+
+    <div class="grit"><p>Вопрос: А поможет ли это продавать быстрее?</p></div>
+    <div class="card"><p>Ответ: Да, потому что людям не нужно задавать лишних вопросов. Прозрачные цены и понятные описания повышают доверие и экономят время обеим сторонам.</p></div>
+
+    <div class="grit"><p>Вопрос: А безопасно ли указывать цены публично?</p></div>
+    <div class="card"><p>Ответ: Это стандартная практика. Главное — честно указывать реальную стоимость и по возможности добавлять пометки о нюансах: скидках, условиях доставки или предоплате.</p></div></div>
+
+    <div class="grit"><p>Вопрос: А если покупатель попросит скидку?</p></div>
+    <div class="card"><p>Ответ: Решать вам. Можно заранее указать, где цена фиксирована, а где возможен торг. Это избавит от недоразумений и сделает общение проще.</p></div></div>
+</section>
+</section>
+
+<script>
+const days = document.getElementById("days");
+const price = document.getElementById("price");
+
+days.addEventListener("input", () => {
+  const val = parseInt(days.value);
+  let currentPrice = 0;
+  if(val >= 30){
+    currentPrice = 1.99;
+  }
+  else if(val >= 10){
+    currentPrice = 0.89;
+  }
+  else if(val >= 2){
+    currentPrice = 0.29;
+  }
+  else if(val >= 1){
+    currentPrice = 0.19;
+  }
+
+  price.textContent = currentPrice;
+});
+</script>
+
+<footer>
+    <a href="index.html">Home</a>
+    <a href="policy.html">Policy</a>
+    <a href="contacts.html">Contacts</a>
+    <p>© 2026 Collectify</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
